@@ -15,46 +15,62 @@
 </head>
 
 <body style="padding-left: 0px; padding-right: 0px">
-    <div id="app">Loading...</div>
-    
+    <div id="app">
+        <div style="position: absolute; top: 30vh; width: 100%; color: #cb0c9f; text-align: center; background-image: linear-gradient(to right, #fc00ff 0%, #00dbde 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">
+            <h1>Crosby Web</h1>
+            <div style="display:flex; gap:10px; justify-content:center; align-items:center">
+                <div class="spinner-border" role="status"></div>
+                The application is loading...
+            </div>
+        </div>
+    </div>
+    <!-- -->
+    <div id="blazor-error-ui">
+        An unhandled error has occurred.
+        <a href="" class="reload">Reload</a>
+        <a class="dismiss">🗙</a>
+    </div>
+
     <script src="_framework/blazor.webassembly.js"></script>
     <script src="_content/MudBlazor/MudBlazor.min.js"></script>
     <script src="https://unpkg.com/@teleporthq/teleport-custom-scripts"></script>
     <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
-<script>
-    function submitcontactform() {
-        alert("Message Sent!");
-    }
-    const burger = document.querySelector("#burger"); 
-    const closeMobileMenu = document.querySelector("#CloseMobileMenu");
-    burger.addEventListener("click", function() {
-
-        document.getElementById("mobilemenu").style.setProperty('display', 'block', 'important');
-        document.getElementById("mobilemenu").style.display = "block";
-    });
-    closeMobileMenu.addEventListener("click", function () {
-
-        document.getElementById("mobilemenu").style.setProperty('display', 'none', 'important');
-
-    });
-    function BlazorScrollToId(id) {
-
-        document.getElementById("mobilemenu").style.setProperty('display', 'none', 'important');
-
-        const element = document.getElementById(id);
-        if (element instanceof HTMLElement) {
-            element.scrollIntoView({
-                behavior: "smooth",
-                block: "start",
-                inline: "nearest"
-            });
+    <script>
+        function submitcontactform() {
+            alert("Message Sent!");
         }
-        //document.getElementById("mobilemenu").style.setProperty('display', 'none', 'important');
-        //document.getElementsByClassName("header-mobile-menu").style.setProperty('display', 'none', 'important');
-        //document.getElementById("mobilemenu").style.display = "none !important";
-       // document.getElementsByClassName("header-mobile-menu").style.backgroundColor = "blue";
-    }
-</script>
+        /*
+        const burger = document.querySelector("#burger");
+        const closeMobileMenu = document.querySelector("#CloseMobileMenu");
+        burger.addEventListener("click", function() {
+
+            document.getElementById("mobilemenu").style.setProperty('display', 'block', 'important');
+            document.getElementById("mobilemenu").style.display = "block";
+        });
+        closeMobileMenu.addEventListener("click", function () {
+
+            document.getElementById("mobilemenu").style.setProperty('display', 'none', 'important');
+
+        });
+        */
+        function BlazorScrollToId(id) {
+
+            document.getElementById("mobilemenu").style.setProperty('display', 'none', 'important');
+
+            const element = document.getElementById(id);
+            if (element instanceof HTMLElement) {
+                element.scrollIntoView({
+                    behavior: "smooth",
+                    block: "start",
+                    inline: "nearest"
+                });
+            }
+            //document.getElementById("mobilemenu").style.setProperty('display', 'none', 'important');
+            //document.getElementsByClassName("header-mobile-menu").style.setProperty('display', 'none', 'important');
+            //document.getElementById("mobilemenu").style.display = "none !important";
+            // document.getElementsByClassName("header-mobile-menu").style.backgroundColor = "blue";
+        }
+    </script>
 </body>
 
 </html>
