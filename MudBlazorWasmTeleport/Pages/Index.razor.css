@@ -1010,7 +1010,24 @@
         margin-bottom: var(--dl-space-space-unit);
         flex-direction: row;
     }
-
+.nav-contact-container {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: row;
+    color:black;
+}
+.nav-contact-icon {
+    fill: var(--dl-color-gray-700);
+    width: 24px;
+    height: 24px;
+    margin-right: var(--dl-space-space-unit);
+}
+.nav-contact-link {
+    opacity: 0.8;
+    text-decoration: none;
+    color: var(--dl-color-gray-700);
+    
+}
     .contact-icon {
         fill: var(--dl-color-gray-white);
         width: 24px;
@@ -1021,6 +1038,7 @@
     .contact-link {
         opacity: 0.8;
         text-decoration: none;
+        color: white;
     }
 
     .contact-container6 {
@@ -1041,15 +1059,16 @@
     .contact-link1 {
         opacity: 0.8;
         text-decoration: none;
+        color: white;
     }
 
-    .contact-container7 {
-        display: flex;
-        margin-top: var(--dl-space-space-unit);
-        align-items: flex-start;
-        margin-bottom: var(--dl-space-space-unit);
-        flex-direction: row;
-    }
+.contact-container7 {
+    display: flex;
+    margin-top: var(--dl-space-space-unit);
+    align-items: flex-start;
+    margin-bottom: var(--dl-space-space-unit);
+    flex-direction: row;
+}
 
     .contact-icon4 {
         fill: var(--dl-color-gray-white);
@@ -1072,17 +1091,17 @@
         object-fit: cover;
     }
 
-    .contact-container8 {
-        top: auto;
-        left: auto;
-        right: 0px;
-        width: 100%;
-        bottom: 0px;
-        height: 100%;
-        opacity: 0.9;
-        position: absolute;
-        background-image: linear-gradient(310deg,#2152ff,#21d4fd);
-    }
+.contact-container8 {
+    top: auto;
+    left: auto;
+    right: 0px;
+    width: 100%;
+    bottom: 0px;
+    height: 100%;
+    opacity: 0.9;
+    position: absolute;
+    background-image: linear-gradient(310deg,#7928ca,#ff0080);
+}
 
     @media(max-width: 991px) {
         .contact-container {
@@ -1113,15 +1132,15 @@
         }
     }
 
-    .footer-footer {
-        width: 100%;
-        height: auto;
-        display: flex;
-        position: relative;
-        align-items: center;
-        flex-direction: column;
-        background-image: linear-gradient(310deg,#141727,#3a416f);
-    }
+.footer-footer {
+    width: 100%;
+    height: auto;
+    display: flex;
+    position: relative;
+    align-items: center;
+    flex-direction: column;
+    background-image: linear-gradient(310deg,#7928ca,#ff0080);
+}
 
     .footer-container {
         color: var(--dl-color-gray-white);
