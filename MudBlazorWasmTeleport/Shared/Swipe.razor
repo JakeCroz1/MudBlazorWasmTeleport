@@ -1,0 +1,42 @@
+﻿@inject IJSRuntime JSRuntime
+@*
+    -Reference: swipe.js
+    -Location: wwwroot/js/swipe.js
+*@
+@code {
+    /**/
+    class SwipeSwipe : MudBlazorWasmTeleport.Interfaces.ISwipe
+    {
+        public enum jsSwipeFunctions
+        {
+            runSwipe
+            //stopSwipe,
+        }
+        // To detect redundant calls
+        private bool _disposedValue;
+        private string _jsFunction="";
+        public string JsFunction { get => _jsFunction; set => _jsFunction=value; }
+
+        public void RunSwipe(string jsFunc)
+        {
+            _jsFunction = jsFunc;
+            //return JsFunction;
+        }
+
+
+    }
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+
+        SwipeSwipe s = new SwipeSwipe();
+
+        //s.RunSwipe(nameof(Swipe.SwipeSwipe.jsSwipeFunctions.runSwipe));
+        foreach (string item in Enum.GetNames(typeof(Swipe.SwipeSwipe.jsSwipeFunctions)))
+        {
+            s.RunSwipe(item);
+            await JSRuntime.InvokeVoidAsync(s.JsFunction);
+        }
+        //s.RunSwipe("runSwipe");
+        //await JSRuntime.InvokeVoidAsync(s.JsFunction);
+    } 
+}
