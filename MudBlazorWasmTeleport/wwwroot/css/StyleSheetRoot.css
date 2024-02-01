@@ -41,26 +41,6 @@
     --dl-size-size-triplequarterunit: 0.75rem;
     --dl-space-space-unitandahalfunit: 1.5rem;
     --dl-space-space-triplequarterunit: 0.75rem;
-    --gradient-1: linear-gradient(to right, #fc00ff 0%, #00dbde 100%);
-}
-
-.swiper-pagination-bullet-active {
-    background-color: black !important;
-}
-
-.swiper-button-next {
-    right: 0px;
-    color: #00dbde !important;
-}
-
-.swiper-button-prev {
-    left: 0px;
-    color: #fc00ff;
-}
-
-.swiper-button-next:after,
-.swiper-button-prev:after {
-    font-size: 20px !important;
 }
 
 .teleport-show {
