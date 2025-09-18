@@ -1,4 +1,4 @@
-﻿function runSwipe() {
+export function runSwipe() {
     /*
     var swiper = new Swiper(".mySwiper", {
         effect: "coverflow",
@@ -18,13 +18,13 @@
             stretch: 0,
             depth: 0,
             modifier: 1,
-            slideShadows: true,           
+            slideShadows: true,
         },
         pagination: {
             el: ".swiper-pagination",
         },
     });
-    
+
     var swiper = new Swiper(".js-testimonials-slider", {
         //freeMode: true,
         grabCursor: true,
@@ -75,7 +75,7 @@
             768: {
                 slidesPerView: 2,
                 spaceBetween: 44
-            }, 
+            },
             1024: {
                 slidesPerView: 2,
                 spaceBetween: 44
