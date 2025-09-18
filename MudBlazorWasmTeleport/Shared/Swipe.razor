@@ -27,16 +27,18 @@
     }
     protected override async Task OnAfterRenderAsync(bool firstRender)
     {
-
-        SwipeSwipe s = new SwipeSwipe();
-
-        //s.RunSwipe(nameof(Swipe.SwipeSwipe.jsSwipeFunctions.runSwipe));
-        foreach (string item in Enum.GetNames(typeof(Swipe.SwipeSwipe.jsSwipeFunctions)))
+        if(firstRender == true)
         {
-            s.RunSwipe(item);
-            await JSRuntime.InvokeVoidAsync(s.JsFunction);
+            SwipeSwipe s = new SwipeSwipe();
+
+            //s.RunSwipe(nameof(Swipe.SwipeSwipe.jsSwipeFunctions.runSwipe));
+            foreach (string item in Enum.GetNames(typeof(Swipe.SwipeSwipe.jsSwipeFunctions)))
+            {
+                s.RunSwipe(item);
+                await JSRuntime.InvokeVoidAsync(s.JsFunction);
+            }
+            //s.RunSwipe("runSwipe");
+            //await JSRuntime.InvokeVoidAsync(s.JsFunction);
         }
-        //s.RunSwipe("runSwipe");
-        //await JSRuntime.InvokeVoidAsync(s.JsFunction);
     } 
 }
